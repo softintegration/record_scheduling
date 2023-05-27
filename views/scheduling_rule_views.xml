@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <!-- Scheduling Rule tree view -->
+        <record id="scheduling_rule_tree_view" model="ir.ui.view">
+            <field name="name">scheduling.rule.tree</field>
+            <field name="model">scheduling.rule</field>
+            <field name="arch" type="xml">
+                <tree string="Scheduling rule">
+                    <field name="model_id"/>
+                    <field name="field_id" />
+                    <field name="coefficient" />
+                    <field name="active" widget="boolean_toggle"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Scheduling Rule form view -->
+        <record id="scheduling_rule_form_view" model="ir.ui.view">
+            <field name="name">scheduling.rule.form</field>
+            <field name="model">scheduling.rule</field>
+            <field name="arch" type="xml">
+                <form string="Scheduling rule">
+                    <header/>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box"/>
+                        <field name="company_id" invisible="1"/>
+                        <group>
+                            <group name="group_header_left">
+                                <field name="model_id" options="{'no_create':True,'no_edit':True}"/>
+                                <field name="model_name" invisible="1"/>
+                                <field name="field_id"  options="{'no_create':True,'no_edit':True}"
+                                        attrs="{'invisible':[('model_name','=',False)]}" domain="[('model','=',model_name)]"/>
+                                <field name="active" widget="boolean_toggle"/>
+                            </group>
+                            <group name="group_header_right">
+                                 <field name="coefficient"/>
+                            </group>
+                        </group>
+                        <group name="line_ids" string="Notes by domain">
+                            <field name="line_ids" nolabel="1">
+                                <tree>
+                                    <field name="note"/>
+                                    <field name="domain"/>
+                                </tree>
+                                <form>
+                                    <sheet>
+                                        <group>
+                                            <field name="model_name" invisible="1"/>
+                                            <field name="note"/>
+                                            <field name="domain" widget="domain" options="{'model': 'model_name', 'in_dialog': True}"/>
+                                        </group>
+                                        <group name="notes" string="Notes and constraints"/>
+                                        <div name="notes">
+                                            <p>* If you want to edit the domain manually,you have to take in account that all the domain elements must be string</p>
+                                            <p>* In the most cases,only the last part of the domain should be modified manually</p>
+                                            <p>* Sometimes,we have to do dynamic dates comparison,to do this you have to respect the syntax bellow : </p>
+                                            <p>     <strong>today : </strong>retrieve the real time when trigger the scheduling</p>
+                                            <p>     <strong>timedelta(days=7) : </strong>The codification of number of days to be added or subtracted</p>
+                                        </div>
+                                    </sheet>
+                                </form>
+                            </field>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <!-- Manufacturing Planning filter view -->
+        <record id="scheduling_rule_filter_view" model="ir.ui.view">
+            <field name="name">scheduling.rule.filter.view</field>
+            <field name="model">scheduling.rule</field>
+            <field name="arch" type="xml">
+                <search string="Search Scheduling rule">
+                    <field name="field_id" string="Field"/>
+                    <separator/>
+                    <filter string="Archived" name="filter_inactive" domain="[('active', '=', False)]"/>
+                    <separator/>
+                </search>
+            </field>
+        </record>
+
+        <!-- Scheduling Rule action -->
+        <record id="scheduling_rule_action" model="ir.actions.act_window">
+            <field name="name">Scheduling Rule</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">scheduling.rule</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" eval="False"/>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    No Scheduling Rule found. Let's create one.
+                </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

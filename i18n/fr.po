@@ -1,0 +1,197 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* record_scheduling
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-27 16:17+0000\n"
+"PO-Revision-Date: 2023-05-27 16:17+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: record_scheduling
+#: model_terms:ir.ui.view,arch_db:record_scheduling.scheduling_rule_form_view
+msgid ""
+"* If you want to edit the domain manually,you have to take in account that "
+"all the domain elements must be string"
+msgstr ""
+"* Si vous souhaitez modifier le domaine manuellement, vous devez tenir compte que "
+"tous les éléments du domaine doivent être de type chaîne de caractére"
+
+#. module: record_scheduling
+#: model_terms:ir.ui.view,arch_db:record_scheduling.scheduling_rule_form_view
+msgid ""
+"* In the most cases,only the last part of the domain should be modified "
+"manually"
+msgstr ""
+"* Dans la plupart des cas, que la dernière partie du domaine doit être modifiée "
+"manuellement"
+
+#. module: record_scheduling
+#: model_terms:ir.ui.view,arch_db:record_scheduling.scheduling_rule_form_view
+msgid ""
+"* Sometimes,we have to do dynamic dates comparison,to do this you have to "
+"respect the syntax bellow :"
+msgstr ""
+"* Parfois, nous devons faire une comparaison dynamique des dates, pour ce faire, vous devez "
+"respectez la syntaxe ci-dessous :"
+
+#. module: record_scheduling
+#: model_terms:ir.ui.view,arch_db:record_scheduling.scheduling_rule_form_view
+msgid ""
+"<strong>timedelta(days=7) : </strong>The codification of number of days to "
+"be added or subtracted"
+msgstr ""
+"<strong>timedelta(days=7) : </strong>La codification du nombre de jours à "
+"ajouter ou soustraire"
+
+#. module: record_scheduling
+#: model_terms:ir.ui.view,arch_db:record_scheduling.scheduling_rule_form_view
+msgid ""
+"<strong>today : </strong>retrieve the real time when trigger the scheduling"
+msgstr ""
+"<strong>today : </strong>récupérer le temps réel lors du déclenchement de l'ordonnancement"
+
+#. module: record_scheduling
+#: model:ir.model.fields,field_description:record_scheduling.field_scheduling_rule__active
+msgid "Active"
+msgstr "Activer"
+
+#. module: record_scheduling
+#: model_terms:ir.ui.view,arch_db:record_scheduling.scheduling_rule_filter_view
+msgid "Archived"
+msgstr "Archivée"
+
+#. module: record_scheduling
+#: model:ir.model.fields,field_description:record_scheduling.field_scheduling_rule__coefficient
+msgid "Coefficient"
+msgstr "Coefficient"
+
+#. module: record_scheduling
+#: model:ir.model.fields,field_description:record_scheduling.field_scheduling_rule__company_id
+msgid "Company"
+msgstr "Société"
+
+#. module: record_scheduling
+#: model:ir.model.fields,field_description:record_scheduling.field_scheduling_rule__create_uid
+#: model:ir.model.fields,field_description:record_scheduling.field_scheduling_rule_line__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: record_scheduling
+#: model:ir.model.fields,field_description:record_scheduling.field_scheduling_rule__create_date
+#: model:ir.model.fields,field_description:record_scheduling.field_scheduling_rule_line__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: record_scheduling
+#: model:ir.model.fields,field_description:record_scheduling.field_scheduling_rule__display_name
+#: model:ir.model.fields,field_description:record_scheduling.field_scheduling_rule_line__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: record_scheduling
+#: model:ir.model.fields,field_description:record_scheduling.field_scheduling_rule_line__domain
+msgid "Domain"
+msgstr "Domaine"
+
+#. module: record_scheduling
+#: model:ir.model.fields,field_description:record_scheduling.field_scheduling_rule__field_id
+#: model_terms:ir.ui.view,arch_db:record_scheduling.scheduling_rule_filter_view
+msgid "Field"
+msgstr "Champ"
+
+#. module: record_scheduling
+#: model:ir.model.fields,field_description:record_scheduling.field_scheduling_rule__id
+#: model:ir.model.fields,field_description:record_scheduling.field_scheduling_rule_line__id
+msgid "ID"
+msgstr "ID"
+
+#. module: record_scheduling
+#: model:ir.model.fields,field_description:record_scheduling.field_scheduling_rule____last_update
+#: model:ir.model.fields,field_description:record_scheduling.field_scheduling_rule_line____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: record_scheduling
+#: model:ir.model.fields,field_description:record_scheduling.field_scheduling_rule__write_uid
+#: model:ir.model.fields,field_description:record_scheduling.field_scheduling_rule_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: record_scheduling
+#: model:ir.model.fields,field_description:record_scheduling.field_scheduling_rule__write_date
+#: model:ir.model.fields,field_description:record_scheduling.field_scheduling_rule_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: record_scheduling
+#: model:ir.model.fields,field_description:record_scheduling.field_scheduling_rule__line_ids
+msgid "Line"
+msgstr "Note par domaine"
+
+#. module: record_scheduling
+#: model:ir.model.fields,field_description:record_scheduling.field_scheduling_rule__model_id
+#: model:ir.model.fields,field_description:record_scheduling.field_scheduling_rule__model_name
+#: model:ir.model.fields,field_description:record_scheduling.field_scheduling_rule_line__model_name
+msgid "Model"
+msgstr "Modèle"
+
+#. module: record_scheduling
+#: model_terms:ir.actions.act_window,help:record_scheduling.scheduling_rule_action
+msgid "No Scheduling Rule found. Let's create one."
+msgstr "Aucune règle d'ordonnancement trouvée. Créons-en un."
+
+#. module: record_scheduling
+#: model:ir.model.fields,field_description:record_scheduling.field_scheduling_rule_line__note
+msgid "Note"
+msgstr ""
+
+#. module: record_scheduling
+#: model_terms:ir.ui.view,arch_db:record_scheduling.scheduling_rule_form_view
+msgid "Notes and constraints"
+msgstr "Notes et contraintes"
+
+#. module: record_scheduling
+#: model_terms:ir.ui.view,arch_db:record_scheduling.scheduling_rule_form_view
+msgid "Notes by domain"
+msgstr "Note par domaine"
+
+#. module: record_scheduling
+#: model:ir.actions.act_window,name:record_scheduling.scheduling_rule_action
+#: model:ir.model.fields,field_description:record_scheduling.field_scheduling_rule_line__scheduling_rule_id
+msgid "Scheduling Rule"
+msgstr "Règle d'ordonnancement"
+
+#. module: record_scheduling
+#: model:ir.model,name:record_scheduling.model_scheduling_rule
+#: model_terms:ir.ui.view,arch_db:record_scheduling.scheduling_rule_form_view
+#: model_terms:ir.ui.view,arch_db:record_scheduling.scheduling_rule_tree_view
+msgid "Scheduling rule"
+msgstr "Règle d'ordonnancement"
+
+#. module: record_scheduling
+#: model:ir.model,name:record_scheduling.model_scheduling_rule_line
+msgid "Scheduling rule line"
+msgstr "Ligne de règle d'ordonnancement"
+
+#. module: record_scheduling
+#: model_terms:ir.ui.view,arch_db:record_scheduling.scheduling_rule_filter_view
+msgid "Search Scheduling rule"
+msgstr "Rechercher dans Règle d'ordonnancement"
+
+#. module: record_scheduling
+#: code:addons/record_scheduling/models/scheduling_rule.py:0
+#, python-format
+msgid ""
+"Some scheduling rules are poorly formed,All the parts of the rules must be "
+"string"
+msgstr ""
+"Certaines règles d'ordonnancement sont mal formées, toutes les parties des règles doivent être"
+" de type chaîne de caractére"

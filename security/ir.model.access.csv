@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_scheduling_rule_user,scheduling.rule.user,model_scheduling_rule,base.group_user,1,1,1,1
+access_scheduling_rule_line_user,scheduling.rule.line.user,model_scheduling_rule_line,base.group_user,1,1,1,1
+
