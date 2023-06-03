@@ -10,7 +10,6 @@ import ast
 from datetime import datetime, timedelta
 from odoo.osv.expression import DOMAIN_OPERATORS
 
-s = "- datetime.timedelta(milliseconds=inactivity_period)"
 SPECIAL_DOMAIN_LEAFS = {
     'today': datetime.now().date(),
     'Today': datetime.now().date(),
@@ -53,7 +52,7 @@ class SchedulingRule(models.Model):
         records_average = {}
         # get the appropriate scheduling rules basing on the records to schedule
         applied_rules = self._get_scheduling_rules_by_record(records)
-        # loop over the scheduling rules to apply each rule on the appropriate record,the appropriate record is the one matching to the domain of the rule
+        # loop on the scheduling rules to apply each rule on the appropriate record,the appropriate record is the one matching to the domain of the rule
         for scheduling_rule in applied_rules.mapped('line_ids'):
             domain = self._parse_domain(scheduling_rule.domain)
             for match_record in self.env[records._name].search([('id', 'in', records.ids)] + domain):
